@@ -1,0 +1,28 @@
+<body>
+  <div id="wrapper">
+    <div class="heading">
+      <h1>Wecome to Audit Management!</h1>
+    </div>
+    <div class="form">
+    <form class = "login" (ngSubmit) = "onLogIn()">
+      <h2>Login</h2>
+      <div class="input">
+        <div class="inputBox">
+          <label>Username</label>
+          <input type="text" [(ngModel)]="username" name="username" placeholder="Username" required>
+        </div>
+        <div class="inputBox">
+          <label>Password</label>
+          <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required>
+        </div>
+        <div class="inputBox">
+          <input type="submit" name="" value="Signin">
+        </div>
+      </div>
+      <div class="alert alert-danger error-message" role="alert" *ngIf="message.length>0">
+                {{ message }}
+      </div>
+    </form>
+    </div>
+  </div>
+</body>
